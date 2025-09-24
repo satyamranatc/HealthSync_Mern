@@ -7,6 +7,13 @@ export async function diseaseList(req,res)
     res.json(diseaseList);
 
 }
+export async function diseaseDetials(req,res)
+{
+    let id = req.params.id;
+    let diseaseData = await Disease.findById(id).populate("opretingDoctor");
+    res.json(diseaseData);
+
+}
 
 export async function addDisease(req,res)
 {

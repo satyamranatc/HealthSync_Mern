@@ -5,6 +5,7 @@ const router = Router();
 
 
 router.get("/list",diseaseList);
+router.get("/details/:id",diseaseList);
 router.post("/add",addDisease);
 router.put("/update/:id",updateDisease);
 router.delete("/delete/:id",deleteDisease);
