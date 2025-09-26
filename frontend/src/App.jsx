@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar.jsx"
 
 import Home from "./pages/Home.jsx"
 import Doctors from "./pages/Doctors.jsx"
+import DoctorDetails from "./pages/DoctorDetails.jsx"
 import Treatments from "./pages/Treatments.jsx"
 
 
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path='/' element = {<Home/>} />
         <Route path='/doctors' element = {<Doctors/>} />
+        <Route path='/doctors/details/:id' element = {<DoctorDetails/>} />
         <Route path='/treatments' element = {<Treatments/>} />
       </Routes>
       

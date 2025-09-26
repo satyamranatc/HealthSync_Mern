@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from "axios"
+import {Link} from "react-router-dom"
 
 export default function Doctors() 
 {
@@ -38,9 +39,11 @@ export default function Doctors()
                                 <p className='text-green-600 font-semibold text-lg'>₹{e.fee}</p>
                                 <span className="text-xs text-gray-500">consultation fee</span>
                             </div>
+                            <Link to={`/doctors/details/${e._id}`}>
                             <button className='w-full py-3 px-4 text-white text-sm font-medium rounded-2xl bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-[1.02]'>
-                                Consult Now
+                               View Profile
                             </button>
+                            </Link>
                         </div>
                     </div>
                 ))

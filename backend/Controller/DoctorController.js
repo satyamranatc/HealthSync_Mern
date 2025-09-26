@@ -1,4 +1,5 @@
 import Doctor from "../Models/DoctorModel.js";
+import Disease from "../Models/DiseaseModel.js";
 
 export async function doctorList(req,res)
 {
@@ -12,7 +13,12 @@ export async function doctorDetails(req,res)
 
     let {id} = req.params;
     let DoctorData = await Doctor.findById(id);
-    res.json(DoctorData);
+    let DiseaseData = await Disease.find({opretingDoctor:id});
+
+    res.json({
+        DoctorData,
+        DiseaseData
+    });
 
 }
 
