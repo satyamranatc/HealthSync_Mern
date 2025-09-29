@@ -17,7 +17,7 @@ let DoctorSchema = new mongoose.Schema({
     fee:{
         type:Number,
         required:[true,"Fee is required"],
-    },
+    }
     
 });
 

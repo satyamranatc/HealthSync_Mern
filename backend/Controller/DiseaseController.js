@@ -1,4 +1,5 @@
 import Disease from "../Models/DiseaseModel.js";
+import Doctor from "../Models/DoctorModel.js";
 
 export async function diseaseList(req,res)
 {
